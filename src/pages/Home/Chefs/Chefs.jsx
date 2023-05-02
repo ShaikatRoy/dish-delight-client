@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Chefs = () => {
     const [cooks, setCooks] = useState([]);
@@ -26,8 +27,13 @@ const Chefs = () => {
                                 <img src={cook.picture_url} className="max-w-sm rounded-lg shadow-2xl" />
                                 <div>
                                     <h1 className="text-5xl font-bold">{cook.chef_name}</h1>
-                                    <p className="py-6">{cook.bio}</p>
-                                    <button className="btn btn-primary">Get Started</button>
+                                    <p className="py-4">{cook.bio}</p>
+                                    <p className="pt-4">Years of experience: {cook.years_of_experience}</p>
+                                    <p className="pt-4">Numbers of recipes: {cook.number_of_recipes}</p>
+                                    <div className='flex'>
+                                    <p className="pt-4 grow ">Likes: {cook.likes}</p>
+                                    <Link to={`/details/${cook.id}`}><button className="btn btn-primary">View Recipes</button></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
