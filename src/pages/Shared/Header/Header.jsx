@@ -2,15 +2,17 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const Header = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
 
     return (
@@ -23,9 +25,9 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to="/">Home</Link></li>
                         <li tabIndex={0}>
-                            <a className="justify-between">
+                            <Link to="/blog" className="justify-between">
                                 Blog
-                            </a>
+                            </Link>
                         </li>
                         <li><a>Chefs</a></li>
                     </ul>
@@ -36,18 +38,25 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to="/">Home</Link></li>
                     <li tabIndex={0}>
-                        <a>
+                        <Link to="/blog">
                             Blog
-                        </a>
+                        </Link>
                     </li>
                     <li><a>Chefs</a></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                {user && <a href="">
-                Profile
-                </a>}
-                {user ? 
+                {user && <div className="avatar">
+                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 me-5 " >
+                        <img  src={user.photoURL}
+                            data-tooltip-id="tooltip-anchor-hide"
+                            data-tooltip-content={user.displayName}
+                            data-tooltip-delay-hide={1000}
+                        /> <Tooltip id="tooltip-anchor-hide" />
+                    </div>
+                </div>}
+
+                {user ?
                     <button onClick={handleLogout} className='btn'>Logout</button> :
                     <Link to="/login">
                         <button className='btn'>Login</button>

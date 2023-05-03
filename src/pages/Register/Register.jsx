@@ -17,13 +17,13 @@ const Register = () => {
         console.log(name, email, password, photoURL);
 
         createUser(email, password)
-            .then(result => {
+        .then(result => {
             const createdUser = result.user;
             console.log(createdUser)
-             })
-             .catch(error => {
-            console.log(error);
-            })
+        })
+        .catch(error => {
+            console.log(error)
+        })
     } 
     return (
         <div className="hero min-h-screen bg-base-200">
