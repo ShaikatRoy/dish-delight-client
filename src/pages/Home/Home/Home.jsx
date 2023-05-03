@@ -1,5 +1,7 @@
 import React from 'react';
 import Chefs from '../Chefs/Chefs';
+import Stats from '../Stats/Stats';
+import Sliders from '../Sliders/Sliders';
 
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
                 </div>
             </div>
             <Chefs></Chefs>
+            <Stats></Stats>
+            <Sliders></Sliders>
         </div>
     );
 };

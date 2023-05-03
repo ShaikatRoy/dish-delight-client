@@ -7,6 +7,9 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Blog/Blog";
+import Error from "../pages/Error/Error";
+import Stats from "../pages/Home/Stats/Stats";
+import Sliders from "../pages/Home/Sliders/Sliders";
 
 
 const router = createBrowserRouter([
@@ -29,6 +32,14 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.chef_id}`)
             },
             {
+                path: 'stats',
+                element: <Stats></Stats>
+            },
+            {
+                path: 'sliders',
+                element: <Sliders></Sliders>
+            },
+            {
                 path: 'login',
                 element: <Login></Login>
             },
@@ -39,6 +50,10 @@ const router = createBrowserRouter([
             {
                 path: 'blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '*',
+                element: <Error></Error>
             }
             
         ]

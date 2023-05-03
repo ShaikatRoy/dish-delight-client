@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Chefs = () => {
     const [cooks, setCooks] = useState([]);
 
@@ -13,7 +14,7 @@ const Chefs = () => {
 
     return (
         <div>
-            <h2>All chefs</h2>
+            <h2 className='text-5xl font-bold text-center my-20'>All chefs</h2>
 
             <div className="carousel w-full">
                 {cooks.map((cook, index) => (

@@ -8,7 +8,7 @@ const DetailsPage = () => {
     
     return (
         <div>
-             <h2>This is For Recipes: {id}</h2>
+             <h2 className='text-5xl font-bold text-center my-5'>Recipe Page: {id}</h2>
 
              {
                 selectedChefs.map((chef) => <ChefDetails
@@ -17,7 +17,7 @@ const DetailsPage = () => {
                  ></ChefDetails>)
              }
             
-            
+
 
         </div>
     );
