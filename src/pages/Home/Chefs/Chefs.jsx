@@ -32,7 +32,7 @@ const Chefs = () => {
                                     <p className="pt-4">Numbers of recipes: {cook.number_of_recipes}</p>
                                     <div className='flex'>
                                     <p className="pt-4 grow ">Likes: {cook.likes}</p>
-                                    <Link to={`/details/${cook.id}`}><button className="btn btn-primary">View Recipes</button></Link>
+                                    <Link to={`/detailsPage/${cook.id}`} ><button className="btn btn-primary">View Recipes</button></Link>
                                     </div>
                                 </div>
                             </div>
