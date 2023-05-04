@@ -10,6 +10,7 @@ import Blog from "../pages/Blog/Blog";
 import Error from "../pages/Error/Error";
 import Stats from "../pages/Home/Stats/Stats";
 import Extra from "../pages/Home/Extra/Extra";
+import News from "../pages/Home/News/News";
 
 
 const router = createBrowserRouter([
@@ -24,12 +25,12 @@ const router = createBrowserRouter([
             {
                 path: '/detailsPage/:id',
                 element: <PrivateRoute><DetailsPage></DetailsPage></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+                loader: ({params}) => fetch(`https://dish-delight-server-shaikatroy.vercel.app/chefs/${params.id}`)
             },
             {
-                path: '/recipes:chef_id',
+                path: '/recipes/:id',
                 element: <RecipeDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.chef_id}`)
+                loader: ({ params }) => fetch(`https://dish-delight-server-shaikatroy.vercel.app/recipes/${params.id}`)
             },
             {
                 path: 'stats',
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
                 path: 'blog',
                 element: <Blog></Blog>
             },
+            {
+                path: 'news',
+                element: <News></News>
+            }
            
             
         ]

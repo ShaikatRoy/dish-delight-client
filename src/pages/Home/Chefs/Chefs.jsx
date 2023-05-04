@@ -7,7 +7,7 @@ const Chefs = () => {
     const [cooks, setCooks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefs')
+        fetch('https://dish-delight-server-shaikatroy.vercel.app/chefs')
             .then(res => res.json())
             .then(data => setCooks(data))
             .catch(error => console.log(error))
@@ -15,7 +15,7 @@ const Chefs = () => {
 
     return (
         <div>
-            <h2 className='text-5xl font-bold text-center my-20'>All chefs</h2>
+            <h2 className='text-3xl font-semibold text-center my-16'>All chefs</h2>
 
             <LazyLoad height={762} offset={300}>
             <div className="carousel w-full">

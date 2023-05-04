@@ -7,7 +7,7 @@ const Extra = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/recipes')
+        fetch('https://dish-delight-server-shaikatroy.vercel.app/recipes')
             .then(res => res.json())
             .then(data => setItems(data))
             .catch(error => console.log(error))
@@ -15,9 +15,9 @@ const Extra = () => {
 
     return (
         <div>
-            <h2 className='text-center text-2xl font-semibold my-10'>Top Rated Recipes</h2>
+            <h2 className='text-center text-3xl font-semibold my-16'>Top Rated Recipes</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3 mx-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3 mx-10 mb-20">
     {items.slice(0, 9).map(item => (
         <div className="card w-full glass ">
             <figure><img src={item.recipe_picture} class="h-56 w-full object-fit" /></figure>

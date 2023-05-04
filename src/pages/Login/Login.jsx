@@ -16,9 +16,11 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-      
+
+        
         signIn(email, password)
             .then(result => {
+                navigate('/')
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 navigate(from, { replace: true})
@@ -27,6 +29,8 @@ const Login = () => {
                 console.log(error);
                 setErrorMessage('Invalid email or password');
             })
+            
+          
     }
    
     return (

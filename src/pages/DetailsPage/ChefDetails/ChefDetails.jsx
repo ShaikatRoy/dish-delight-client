@@ -41,7 +41,6 @@ const ChefDetails = ({ chef }) => {
                     </div>
                 </div>
                 </LazyLoad>
-            <RecipeDetails></RecipeDetails>
         </>
     );
 };

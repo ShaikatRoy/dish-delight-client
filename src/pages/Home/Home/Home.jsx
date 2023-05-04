@@ -2,6 +2,7 @@ import React from 'react';
 import Chefs from '../Chefs/Chefs';
 import Stats from '../Stats/Stats';
 import Extra from '../Extra/Extra';
+import News from '../News/News';
 
 
 const Home = () => {
@@ -13,13 +14,14 @@ const Home = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-6xl font-bold">Dish Delight</h1>
                         <p className="mb-5 text-white">The Website conveys a sense of homemade authenticity and suggests that the site will focus on cooking techniques and recipes that prioritize fresh, whole ingredients</p>
-                        <button className="btn glass">View recipes</button>
+                        <button className="btn glass">Just Show</button>
                     </div>
                 </div>
             </div>
             <Chefs></Chefs>
             <Stats></Stats>
             <Extra></Extra>
+            <News></News>
         </div>
     );
 };

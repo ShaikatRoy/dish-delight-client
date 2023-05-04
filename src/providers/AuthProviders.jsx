@@ -9,6 +9,7 @@ const googleProvider = new GoogleAuthProvider();
 const githubProviders = new GithubAuthProvider();
 
 const AuthProviders = ({children}) => {
+    
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -43,6 +44,7 @@ const AuthProviders = ({children}) => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+
             })
             .catch(error => {
                 console.log("error", error.message)
