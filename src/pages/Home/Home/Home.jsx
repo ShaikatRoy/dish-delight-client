@@ -1,7 +1,8 @@
 import React from 'react';
 import Chefs from '../Chefs/Chefs';
 import Stats from '../Stats/Stats';
-import Sliders from '../Sliders/Sliders';
+import Extra from '../Extra/Extra';
+
 
 const Home = () => {
     return (
@@ -18,7 +19,7 @@ const Home = () => {
             </div>
             <Chefs></Chefs>
             <Stats></Stats>
-            <Sliders></Sliders>
+            <Extra></Extra>
         </div>
     );
 };

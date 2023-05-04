@@ -9,7 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Blog/Blog";
 import Error from "../pages/Error/Error";
 import Stats from "../pages/Home/Stats/Stats";
-import Sliders from "../pages/Home/Sliders/Sliders";
+import Extra from "../pages/Home/Extra/Extra";
 
 
 const router = createBrowserRouter([
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
                 element: <Stats></Stats>
             },
             {
-                path: 'sliders',
-                element: <Sliders></Sliders>
+                path: 'extra',
+                element: <Extra></Extra>
             },
             {
                 path: 'login',
@@ -51,12 +51,13 @@ const router = createBrowserRouter([
                 path: 'blog',
                 element: <Blog></Blog>
             },
-            {
-                path: '*',
-                element: <Error></Error>
-            }
+           
             
         ]
+    },
+    {
+        path: '*',
+        element: <Error></Error>
     }
 ])
 
