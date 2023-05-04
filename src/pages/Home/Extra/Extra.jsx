@@ -4,7 +4,6 @@ import '@smastrom/react-rating/style.css'
 
 
 const Extra = () => {
-    const [rating, setRating] = useState(0)
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -16,7 +15,7 @@ const Extra = () => {
 
     return (
         <div>
-            <h2>extra section</h2>
+            <h2 className='text-center text-2xl font-semibold my-10'>Top Rated Recipes</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-3 mx-10">
     {items.slice(0, 9).map(item => (

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RecipeDetails from '../RecipeDetails/RecipeDetails';
@@ -14,7 +13,7 @@ const ChefDetails = ({ chef }) => {
     };
 
 
-    const { id, chef_name, years_of_experience, number_of_recipes, likes, picture_url, bio } = chef;
+    const { chef_name, years_of_experience, number_of_recipes, likes, picture_url, bio } = chef;
     return (
         <>
             <LazyLoad height={762} offset={300}>

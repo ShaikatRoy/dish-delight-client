@@ -1,8 +1,22 @@
 import React from 'react';
+import ReactDOM from "react-dom";
+import Pdf from "react-to-pdf";
+const ref = React.createRef()
+const options = {
+    orientation: "portrait",
+    unit: "in",
+    format: [8.5, 11]
+  };
+  
 
 const Blog = () => {
+    
     return (
-        <div>
+        <div className="App text-center my-5">
+      <Pdf className='mx-auto' targetRef={ref} filename="code-example.pdf" options={options}>
+        {({ toPdf }) => <button onClick={toPdf} className="btn btn-outline btn-primary">Generate Pdf</button>}
+      </Pdf>
+      <div ref={ref}>
             <h2 className='text-3xl font-bold text-center'>This is blog </h2>
 
             <div className='mx-auto'>
@@ -46,7 +60,11 @@ const Blog = () => {
                 </div>
             </div>
         </div>
+    </div>
+        
     );
 };
 
 export default Blog;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Blog></Blog>, rootElement);

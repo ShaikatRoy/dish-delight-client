@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 
 const Chefs = () => {
@@ -16,6 +17,7 @@ const Chefs = () => {
         <div>
             <h2 className='text-5xl font-bold text-center my-20'>All chefs</h2>
 
+            <LazyLoad height={762} offset={300}>
             <div className="carousel w-full">
                 {cooks.map((cook, index) => (
                     <div key={cook.id} id={`slide${index + 1}`} className="carousel-item relative w-full">
@@ -41,6 +43,7 @@ const Chefs = () => {
                     </div>
                 ))}
             </div>
+            </LazyLoad>
         </div>
     );
 };

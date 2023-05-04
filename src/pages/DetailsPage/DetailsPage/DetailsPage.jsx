@@ -16,10 +16,8 @@ const DetailsPage = () => {
                     chef={chef}
                  ></ChefDetails>)
              }
-            
+     </div>
 
-
-        </div>
     );
 };
 
