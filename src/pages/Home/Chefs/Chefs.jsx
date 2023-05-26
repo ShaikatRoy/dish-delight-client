@@ -49,19 +49,3 @@ const Chefs = () => {
 };
 
 export default Chefs;
-
-
-
-{/* {cooks.map(cook => (
-                        <div className="hero min-h-screen bg-base-200 ">
-                            <div key={cook.id} className="hero-content flex-col lg:flex-row">
-                                <img src={cook.picture_url} className="max-w-sm rounded-lg shadow-2xl" />
-                                <div>
-                                    <h1 className="text-5xl font-bold">{cook.chef_name}</h1>
-                                    <p className="py-6">{cook.bio}</p>
-                                    <button className="btn btn-primary">Get Started</button>
-                                </div>
-                            </div>
-                        </div>
-                    ))} */}
-                    
